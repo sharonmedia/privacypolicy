@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – Olah Skill Sejarah Dunia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --navy: #0B1D3A;
+      --blue: #1A4FA0;
+      --gold: #C9962C;
+      --gold-light: #F0C84A;
+      --cream: #F9F6EF;
+      --white: #FFFFFF;
+      --muted: #6B7A8F;
+      --border: #D9E2EF;
+      --green: #166534;
+      --green-bg: #F0FDF4;
+      --green-border: #16A34A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+      line-height: 1.75;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      padding: 60px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(26,79,160,0.5) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,150,44,0.15);
+      border: 1px solid rgba(201,150,44,0.4);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .hero h1 span { color: var(--gold-light); }
+    .hero-app {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+    }
+    .hero-pills {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .pill {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 100px;
+    }
+    .pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green-border); }
+
+    /* ── LANG TOGGLE ── */
+    .lang-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+      gap: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .lang-btn {
+      padding: 7px 22px;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      transition: all .2s;
+    }
+    .lang-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    /* ── LAYOUT ── */
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── META BOX ── */
+    .meta-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 32px;
+    }
+    .meta-item { font-size: 13px; }
+    .meta-item strong { display: block; color: var(--muted); font-weight: 500; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 2px; }
+    .meta-item span { font-weight: 600; color: var(--navy); }
+
+    /* ── SUMMARY ── */
+    .summary-box {
+      background: #EEF4FF;
+      border: 1px solid #BFD3F5;
+      border-left: 4px solid var(--blue);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      color: var(--navy);
+      font-weight: 500;
+      line-height: 1.7;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 44px; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title .num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--gold);
+      background: rgba(201,150,44,0.1);
+      border: 1px solid rgba(201,150,44,0.3);
+      border-radius: 6px;
+      padding: 3px 9px;
+      text-transform: uppercase;
+    }
+
+    .sub-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--blue);
+      margin: 20px 0 8px;
+    }
+
+    p { font-size: 15px; color: #2C3E5A; margin-bottom: 12px; line-height: 1.8; }
+
+    ul { list-style: none; padding: 0; margin-bottom: 14px; }
+    ul li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 14.5px;
+      color: #2C3E5A;
+      margin-bottom: 7px;
+      line-height: 1.7;
+    }
+    ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 12px;
+      top: 3px;
+    }
+
+    /* ── FREE BADGES ── */
+    .free-box {
+      background: var(--green-bg);
+      border: 1px solid #BBF7D0;
+      border-left: 4px solid var(--green-border);
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 14px 0;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--green);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .free-box .icon { font-size: 18px; }
+
+    /* ── CONTACT BOX ── */
+    .contact-box {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 26px;
+      margin-top: 14px;
+    }
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .contact-row:last-child { border-bottom: none; }
+    .contact-row strong { min-width: 110px; color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; padding-top: 2px; }
+    .contact-row span { color: var(--navy); font-weight: 500; }
+
+    /* ── FOOTER ── */
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--navy);
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+    }
+    .footer strong { color: var(--gold-light); display: block; font-family: 'Playfair Display', serif; font-size: 17px; margin-bottom: 6px; }
+
+    /* ── HIDDEN ── */
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 44px 16px 36px; }
+      .wrapper { padding: 32px 16px 60px; }
+      .meta-box { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Legal Document</div>
+  <h1>Privacy <span>Policy</span></h1>
+  <div class="hero-app">OLAH SKILL SEJARAH DUNIA &nbsp;·&nbsp; Google Play</div>
+  <div class="hero-pills">
+    <div class="pill"><span class="dot"></span> No Ads</div>
+    <div class="pill"><span class="dot"></span> Free Forever</div>
+    <div class="pill"><span class="dot"></span> No Account Required</div>
+    <div class="pill"><span class="dot"></span> Privacy First</div>
+  </div>
+</div>
+
+<!-- LANGUAGE TOGGLE -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('en')">🇬🇧 English</button>
+  <button class="lang-btn" onclick="setLang('id')">🇮🇩 Bahasa Indonesia</button>
+</div>
+
+<div class="wrapper">
+
+  <!-- ═══════════ ENGLISH ═══════════ -->
+  <div data-lang="en" class="visible">
+
+    <div class="meta-box">
+      <div class="meta-item"><strong>Effective Date</strong><span>May 12, 2026</span></div>
+      <div class="meta-item"><strong>App Name</strong><span>Olah Skill Sejarah Dunia</span></div>
+      <div class="meta-item"><strong>Platform</strong><span>Google Play Store (Android)</span></div>
+      <div class="meta-item"><strong>Category</strong><span>Educational Game</span></div>
+    </div>
+
+    <div class="summary-box">
+      Olah Skill Sejarah Dunia is a completely free, ad-free educational game that requires no account registration. We deeply respect your privacy and are committed to keeping your data safe.
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <div class="section-title"><span class="num">01</span> Introduction</div>
+      <p>Welcome to Olah Skill Sejarah Dunia. This Privacy Policy explains how we collect, use, disclose, and protect your information when you use our educational game application available on the Google Play Store.</p>
+      <p>By downloading and using this application, you agree to the terms described in this Privacy Policy. If you do not agree with this policy, please do not use our application.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-title"><span class="num">02</span> Developer Information</div>
+      <div class="contact-box">
+        <div class="contact-row"><strong>App Name</strong><span>Olah Skill Sejarah Dunia</span></div>
+        <div class="contact-row"><strong>Platform</strong><span>Google Play Store (Android)</span></div>
+        <div class="contact-row"><strong>Category</strong><span>Educational Game / Knowledge Quiz</span></div>
+        <div class="contact-row"><strong>Cost</strong><span>Completely free — no ads, no in-app purchases</span></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-title"><span class="num">03</span> Information We Collect</div>
+      <div class="sub-title">3.1 Information We Do NOT Collect</div>
+      <p>Olah Skill Sejarah Dunia is designed with a privacy-first approach. We explicitly do NOT collect:</p>
+      <ul>
+        <li>Name, email address, phone number, or any personally identifiable information</li>
+        <li>User accounts — no registration or login required</li>
+        <li>GPS location data or geographic coordinates</li>
+        <li>Financial information, credit card details, or payment data</li>
+        <li>Contact lists, messages, or personal communications</li>
+        <li>Photos, videos, or media files from your device</li>
+        <li>Biometric data (fingerprints, facial recognition)</li>
+        <li>Social media account data</li>
+        <li>Audio or video recordings</li>
+      </ul>
+      <div class="sub-title">3.2 Minimal Technical Data Automatically Collected</div>
+      <p>Some minimal technical data may be automatically collected by the Android system or Google Play Services:</p>
+      <ul>
+        <li>Device OS type and version (e.g., Android 12) for compatibility</li>
+        <li>Device model (e.g., Samsung Galaxy A) for display compatibility</li>
+        <li>Anonymous crash reports for technical troubleshooting</li>
+        <li>Anonymous, aggregated app performance data</li>
+      </ul>
+      <p>This data is anonymous, cannot identify you personally, and is only used to improve the application.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-title"><span class="num">04</span> Data Stored on Your Device</div>
+      <p>To provide a good gameplay experience, the app stores some data locally on your device:</p>
+      <ul>
+        <li>High scores and game history</li>
+        <li>Level or stage progression</li>
+        <li>User preference settings (volume, language, theme)</li>
+        <li>Personal game statistics (correct/incorrect answers)</li>
+      </ul>
+      <p>All local data resides entirely on your device and is <strong>never transmitted</strong> to our servers or any third parties. You can remove it by clearing the app cache or uninstalling the app.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-title"><span class="num">05</span> How We Use Information</div>
+      <p>Minimal technical data (such as crash reports) is used solely to:</p>
+      <ul>
+        <li>Detect and fix technical bugs or errors</li>
+        <li>Improve app performance and stability</li>
+        <li>Ensure compatibility across various Android devices</li>
+        <li>Analyze error patterns for future development</li>
+      </ul>
+      <p>We do <strong>not</strong> use any data for marketing, targeted advertising, or sale to third parties.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-title"><span class="num">06</span> Advertising</div>
+      <div class="free-box"><span class="icon">✓</span> This application contains ABSOLUTELY NO ADS in any form.</div>
+      <p>We do not partner with any ad network such as Google AdMob, Facebook Audience Network, or any other advertising platform. No advertising SDKs are embedded in this application.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <div class="section-title"><span class="num">07</span> In-App Purchases</div>
+      <div class="free-box"><span class="icon">✓</span> This application is COMPLETELY FREE with no in-app purchases of any kind.</div>
+      <p>All content, levels, questions, and features are fully accessible at no additional cost. We do not sell virtual currency, premium items, paid subscriptions, or any additional content.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <div class="section-title"><span class="num">08</span> Sharing Data with Third Parties</div>
+      <p>We do not sell, trade, or transfer your personal information to outside parties. Limited third-party involvement exists as part of standard Android infrastructure:</p>
+      <div class="sub-title">8.1 Google Play Services</div>
+      <p>Google Play Services may collect standard diagnostic data per Google's Privacy Policy. Learn more at <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--blue)">policies.google.com/privacy</a>.</p>
+      <div class="sub-title">8.2 Google Firebase Crashlytics (if applicable)</div>
+      <p>Anonymous crash data may be sent to Firebase Crashlytics. This contains no personal information — only technical error details.</p>
+      <div class="sub-title">8.3 Legal Obligations</div>
+      <p>We may disclose information if required by law or a valid court order.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <div class="section-title"><span class="num">09</span> Data Security</div>
+      <ul>
+        <li>Data minimization — we only collect what is strictly necessary</li>
+        <li>Local data storage with no transmission to external servers</li>
+        <li>No user database managed by us</li>
+        <li>Regular updates to address security vulnerabilities</li>
+        <li>Secure coding practices throughout development</li>
+      </ul>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <div class="section-title"><span class="num">10</span> Children's Privacy</div>
+      <p>This app is suitable for all ages, including children. Our commitments:</p>
+      <ul>
+        <li>We do not knowingly collect personal information from children under 13</li>
+        <li>No account creation or registration required</li>
+        <li>No in-app chat or player communication features</li>
+        <li>No external website links within gameplay</li>
+        <li>No content inappropriate for children</li>
+      </ul>
+      <p>If you are a parent or guardian and believe your child has provided personal information, please contact us immediately.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <div class="section-title"><span class="num">11</span> Your Rights</div>
+      <div class="sub-title">Right of Access</div>
+      <p>You have the right to know what type of data may be collected from your device.</p>
+      <div class="sub-title">Right to Erasure</div>
+      <p>Delete all local data by clearing the app cache, clearing app data, or uninstalling the application via your Android Settings.</p>
+      <div class="sub-title">Right to Rectification</div>
+      <p>If you find inaccurate information about how we handle data, contact us for correction.</p>
+      <div class="sub-title">Right to Lodge a Complaint</div>
+      <p>You may submit a complaint to the competent data protection authority in your region.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <div class="section-title"><span class="num">12</span> App Permissions</div>
+      <div class="sub-title">Permissions That May Be Requested</div>
+      <ul>
+        <li><strong>INTERNET</strong> — To download content or question updates (if any)</li>
+        <li><strong>VIBRATE</strong> — For haptic feedback when answering (optional)</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED</strong> — To initialize app components on device start</li>
+      </ul>
+      <div class="sub-title">Permissions NOT Requested</div>
+      <ul>
+        <li>Location (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION)</li>
+        <li>Camera (CAMERA)</li>
+        <li>Microphone (RECORD_AUDIO)</li>
+        <li>Contacts (READ_CONTACTS)</li>
+        <li>SMS or Phone</li>
+        <li>External storage for personal data</li>
+      </ul>
+    </div>
+
+    <!-- 13 -->
+    <div class="section">
+      <div class="section-title"><span class="num">13</span> International Data Transfers</div>
+      <p>Since data is stored locally on your device and we do not operate external servers, there are no international data transfers performed directly by us. Diagnostic data processed by Google (via Play Services or Firebase) may be handled on servers in various countries per their respective privacy policies.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="section">
+      <div class="section-title"><span class="num">14</span> Third-Party Links</div>
+      <p>This app does not display links to external websites within gameplay. We are not responsible for the privacy practices of third-party services users may access separately.</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="section">
+      <div class="section-title"><span class="num">15</span> Changes to This Policy</div>
+      <p>We may update this Privacy Policy periodically. Changes will be communicated via:</p>
+      <ul>
+        <li>Updated effective date at the top of this page</li>
+        <li>Changelog on the app's Google Play Store listing</li>
+        <li>In-app notification for significant changes</li>
+      </ul>
+      <p>Continued use of the application after changes are published constitutes acceptance.</p>
+    </div>
+
+    <!-- 16 -->
+    <div class="section">
+      <div class="section-title"><span class="num">16</span> Governing Law</div>
+      <p>This Privacy Policy is governed by the laws of the Republic of Indonesia, including:</p>
+      <ul>
+        <li>Law No. 27 of 2022 on Personal Data Protection (UU PDP)</li>
+        <li>Law No. 11 of 2008 on Electronic Information and Transactions (UU ITE)</li>
+        <li>Government Regulation No. 71 of 2019 on Electronic System Administration</li>
+      </ul>
+      <p>Users in the EEA are also protected by GDPR; users in California, USA, by CCPA, to the extent applicable.</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="section">
+      <div class="section-title"><span class="num">17</span> Contact Us</div>
+      <p>Questions, concerns, or requests about this Privacy Policy? Contact us:</p>
+      <div class="contact-box">
+        <div class="contact-row"><strong>Email</strong><span>[insert your developer email]</span></div>
+        <div class="contact-row"><strong>Google Play</strong><span>Olah Skill Sejarah Dunia on Google Play Store</span></div>
+      </div>
+      <p style="margin-top:14px">We aim to respond within <strong>30 business days</strong> of receiving your message.</p>
+    </div>
+
+  </div><!-- /en -->
+
+  <!-- ═══════════ BAHASA INDONESIA ═══════════ -->
+  <div data-lang="id">
+
+    <div class="meta-box">
+      <div class="meta-item"><strong>Berlaku Efektif</strong><span>12 Mei 2026</span></div>
+      <div class="meta-item"><strong>Nama Aplikasi</strong><span>Olah Skill Sejarah Dunia</span></div>
+      <div class="meta-item"><strong>Platform</strong><span>Google Play Store (Android)</span></div>
+      <div class="meta-item"><strong>Kategori</strong><span>Game Edukasi</span></div>
+    </div>
+
+    <div class="summary-box">
+      Olah Skill Sejarah Dunia adalah aplikasi game edukasi yang sepenuhnya gratis, bebas iklan, dan tidak memerlukan pendaftaran akun. Kami sangat menghormati privasi Anda dan berkomitmen untuk menjaga keamanan data Anda.
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <div class="section-title"><span class="num">01</span> Pendahuluan</div>
+      <p>Selamat datang di Olah Skill Sejarah Dunia. Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, mengungkapkan, dan melindungi informasi Anda saat Anda menggunakan aplikasi game edukasi kami yang tersedia di Google Play Store.</p>
+      <p>Dengan mengunduh dan menggunakan aplikasi ini, Anda menyetujui ketentuan yang dijelaskan dalam Kebijakan Privasi ini.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-title"><span class="num">02</span> Identitas Pengembang</div>
+      <div class="contact-box">
+        <div class="contact-row"><strong>Nama Aplikasi</strong><span>Olah Skill Sejarah Dunia</span></div>
+        <div class="contact-row"><strong>Platform</strong><span>Google Play Store (Android)</span></div>
+        <div class="contact-row"><strong>Kategori</strong><span>Game Edukasi / Kuis Pengetahuan</span></div>
+        <div class="contact-row"><strong>Biaya</strong><span>Gratis sepenuhnya — tanpa iklan, tanpa pembelian dalam aplikasi</span></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-title"><span class="num">03</span> Informasi yang Kami Kumpulkan</div>
+      <div class="sub-title">3.1 Informasi yang TIDAK Kami Kumpulkan</div>
+      <p>Kami dengan tegas menyatakan bahwa kami TIDAK mengumpulkan:</p>
+      <ul>
+        <li>Nama, alamat email, nomor telepon, atau informasi identitas pribadi lainnya</li>
+        <li>Akun pengguna — tidak diperlukan registrasi atau login</li>
+        <li>Data lokasi GPS atau koordinat geografis</li>
+        <li>Informasi keuangan, kartu kredit, atau data pembayaran</li>
+        <li>Daftar kontak, pesan, atau komunikasi pribadi</li>
+        <li>Foto, video, atau file media dari perangkat Anda</li>
+        <li>Data biometrik (sidik jari, pengenalan wajah)</li>
+        <li>Data dari akun media sosial</li>
+        <li>Rekaman audio atau video</li>
+      </ul>
+      <div class="sub-title">3.2 Informasi Teknis Minimal yang Dikumpulkan Otomatis</div>
+      <ul>
+        <li>Jenis dan versi sistem operasi perangkat</li>
+        <li>Model perangkat untuk kompatibilitas tampilan</li>
+        <li>Laporan crash anonim untuk keperluan teknis</li>
+        <li>Informasi performa aplikasi yang bersifat anonim dan agregat</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-title"><span class="num">04</span> Data yang Disimpan di Perangkat Anda</div>
+      <ul>
+        <li>Skor tertinggi dan riwayat permainan</li>
+        <li>Kemajuan level atau tahap permainan</li>
+        <li>Pengaturan preferensi pengguna (volume, bahasa, tema)</li>
+        <li>Statistik permainan pribadi (jawaban benar/salah)</li>
+      </ul>
+      <p>Semua data lokal ini sepenuhnya berada di perangkat Anda dan <strong>tidak pernah dikirimkan</strong> ke server kami atau pihak ketiga manapun.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-title"><span class="num">05</span> Cara Kami Menggunakan Informasi</div>
+      <ul>
+        <li>Mendeteksi dan memperbaiki bug atau kesalahan teknis</li>
+        <li>Meningkatkan performa dan stabilitas aplikasi</li>
+        <li>Memastikan kompatibilitas dengan berbagai perangkat Android</li>
+        <li>Menganalisis pola galat untuk pengembangan versi berikutnya</li>
+      </ul>
+      <p>Kami <strong>tidak</strong> menggunakan data untuk pemasaran, periklanan bertarget, atau penjualan data kepada pihak ketiga.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-title"><span class="num">06</span> Iklan</div>
+      <div class="free-box"><span class="icon">✓</span> Aplikasi ini TIDAK MENGANDUNG IKLAN dalam bentuk apapun.</div>
+      <p>Kami tidak bermitra dengan jaringan iklan seperti Google AdMob, Facebook Audience Network, atau jaringan iklan lainnya. Tidak ada SDK iklan yang tertanam dalam aplikasi ini.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <div class="section-title"><span class="num">07</span> Pembelian Dalam Aplikasi</div>
+      <div class="free-box"><span class="icon">✓</span> Aplikasi ini SEPENUHNYA GRATIS tanpa pembelian dalam aplikasi apapun.</div>
+      <p>Semua konten, level, soal, dan fitur dapat diakses sepenuhnya tanpa biaya tambahan.</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="section">
+      <div class="section-title"><span class="num">08</span> Berbagi Data dengan Pihak Ketiga</div>
+      <p>Kami tidak menjual, memperdagangkan, atau memindahtangankan informasi pribadi Anda kepada pihak luar.</p>
+      <div class="sub-title">8.1 Google Play Services</div>
+      <p>Google Play Services mungkin mengumpulkan data diagnostik standar sesuai Kebijakan Privasi Google: <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--blue)">policies.google.com/privacy</a></p>
+      <div class="sub-title">8.2 Google Firebase Crashlytics (jika digunakan)</div>
+      <p>Data crash anonim mungkin dikirim ke Firebase Crashlytics — tidak mengandung informasi pribadi.</p>
+      <div class="sub-title">8.3 Kewajiban Hukum</div>
+      <p>Kami dapat mengungkapkan informasi jika diwajibkan oleh hukum atau perintah pengadilan yang sah.</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <div class="section-title"><span class="num">09</span> Keamanan Data</div>
+      <ul>
+        <li>Minimalisasi data — hanya mengumpulkan yang benar-benar diperlukan</li>
+        <li>Penyimpanan data lokal tanpa transmisi ke server eksternal</li>
+        <li>Tidak ada database pengguna yang kami kelola</li>
+        <li>Pembaruan berkala untuk menutup celah keamanan</li>
+        <li>Praktik pengembangan yang aman (secure coding practices)</li>
+      </ul>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <div class="section-title"><span class="num">10</span> Privasi Anak</div>
+      <ul>
+        <li>Kami tidak mengumpulkan informasi dari anak di bawah usia 13 tahun</li>
+        <li>Tidak diperlukan pembuatan akun atau registrasi</li>
+        <li>Tidak ada fitur obrolan atau komunikasi antar pemain</li>
+        <li>Tidak ada tautan ke situs web eksternal dalam gameplay</li>
+        <li>Tidak ada konten yang tidak pantas untuk anak-anak</li>
+      </ul>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <div class="section-title"><span class="num">11</span> Hak-Hak Anda</div>
+      <div class="sub-title">Hak Akses</div><p>Anda berhak mengetahui data apa yang dikumpulkan dari perangkat Anda.</p>
+      <div class="sub-title">Hak Penghapusan</div><p>Hapus semua data lokal melalui Pengaturan &gt; Aplikasi &gt; Olah Skill Sejarah Dunia &gt; Hapus Cache/Data, atau uninstall aplikasi.</p>
+      <div class="sub-title">Hak Koreksi</div><p>Hubungi kami jika Anda menemukan informasi yang tidak akurat.</p>
+      <div class="sub-title">Hak Pengaduan</div><p>Anda berhak mengajukan pengaduan kepada otoritas perlindungan data yang berwenang.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <div class="section-title"><span class="num">12</span> Izin Aplikasi</div>
+      <div class="sub-title">Izin yang Mungkin Diminta</div>
+      <ul>
+        <li><strong>INTERNET</strong> — Untuk mengunduh konten atau pembaruan soal</li>
+        <li><strong>VIBRATE</strong> — Untuk efek getar saat menjawab soal (opsional)</li>
+        <li><strong>RECEIVE_BOOT_COMPLETED</strong> — Untuk inisialisasi komponen aplikasi</li>
+      </ul>
+      <div class="sub-title">Izin yang TIDAK Diminta</div>
+      <ul>
+        <li>Lokasi (ACCESS_FINE_LOCATION / ACCESS_COARSE_LOCATION)</li>
+        <li>Kamera (CAMERA)</li>
+        <li>Mikrofon (RECORD_AUDIO)</li>
+        <li>Kontak (READ_CONTACTS)</li>
+        <li>SMS atau Telepon</li>
+        <li>Penyimpanan eksternal untuk data pribadi</li>
+      </ul>
+    </div>
+
+    <!-- 13 -->
+    <div class="section">
+      <div class="section-title"><span class="num">13</span> Transfer Data Internasional</div>
+      <p>Karena data disimpan secara lokal di perangkat Anda dan kami tidak memiliki server eksternal, tidak ada transfer data internasional yang kami lakukan secara langsung.</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="section">
+      <div class="section-title"><span class="num">14</span> Tautan Pihak Ketiga</div>
+      <p>Aplikasi ini tidak menampilkan tautan ke situs web eksternal dalam gameplay-nya. Kebijakan Privasi ini hanya berlaku untuk aplikasi kami.</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="section">
+      <div class="section-title"><span class="num">15</span> Perubahan Kebijakan</div>
+      <ul>
+        <li>Pembaruan tanggal berlaku efektif di bagian atas halaman ini</li>
+        <li>Catatan pembaruan pada halaman aplikasi di Google Play Store</li>
+        <li>Pemberitahuan dalam aplikasi untuk perubahan signifikan</li>
+      </ul>
+    </div>
+
+    <!-- 16 -->
+    <div class="section">
+      <div class="section-title"><span class="num">16</span> Hukum yang Berlaku</div>
+      <ul>
+        <li>UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP)</li>
+        <li>UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik (UU ITE)</li>
+        <li>PP No. 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik</li>
+      </ul>
+      <p>Pengguna di EEA juga dilindungi GDPR; pengguna di California, AS, dilindungi CCPA.</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="section">
+      <div class="section-title"><span class="num">17</span> Hubungi Kami</div>
+      <div class="contact-box">
+        <div class="contact-row"><strong>Email</strong><span>[masukkan alamat email pengembang Anda]</span></div>
+        <div class="contact-row"><strong>Google Play</strong><span>Halaman aplikasi Olah Skill Sejarah Dunia di Google Play Store</span></div>
+      </div>
+      <p style="margin-top:14px">Kami berupaya merespons dalam <strong>30 hari kerja</strong> sejak diterimanya pesan Anda.</p>
+    </div>
+
+  </div><!-- /id -->
+
+</div><!-- /wrapper -->
+
+<div class="footer">
+  <strong>Olah Skill Sejarah Dunia</strong>
+  Thank you for trusting our app. We are committed to protecting your privacy.
+  <br/><br/>
+  © 2026 Olah Skill Sejarah Dunia. All rights reserved.
+</div>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('visible', el.dataset.lang === lang);
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.includes(lang === 'en' ? 'English' : 'Indonesia'));
+    });
+  }
+</script>
+</body>
+</html>
